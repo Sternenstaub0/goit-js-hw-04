@@ -1,8 +1,13 @@
 function calcAverageCalories(days) {
+  if (days.length === 0) {
+    return 0; // Повертаємо 0, якщо масив порожній
+  }
+
   let totalCalories = 0;
   for (const day of days) {
     totalCalories += day.calories;
   }
+
   const averageCalories = totalCalories / days.length;
   return averageCalories;
 }
